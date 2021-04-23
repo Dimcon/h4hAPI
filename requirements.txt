@@ -34,3 +34,4 @@ django-cors-headers===3.5.0
 pyjwt==1.7.1
 
 django-rest-swagger==2.2.0
+
