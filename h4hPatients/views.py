@@ -20,7 +20,7 @@ from django.http import Http404
 from .models import *
 
 # Create your views here.
-from .serializers import PatientSerializer
+from .serializers import *
 
 
 class PatientView(generics.ListCreateAPIView):
@@ -33,3 +33,76 @@ class PatientDetailView(generics.RetrieveAPIView):
     queryset = Patient.objects.all()
     serializer_class = PatientSerializer
     url_name = 'patient-detail'
+
+
+class StaffView(generics.ListCreateAPIView):
+    queryset = Staff.objects.all()
+    serializer_class = StaffSerializer
+    url_name = 'staff-list'
+
+
+class StaffDetailView(generics.RetrieveAPIView):
+    queryset = Staff.objects.all()
+    serializer_class = StaffSerializer
+    url_name = 'staff-detail'
+
+
+class SymptomView(generics.ListCreateAPIView):
+    queryset = Symptom.objects.all()
+    serializer_class = SymptomSerializer
+    url_name = 'Symptom-list'
+
+
+class SymptomDetailView(generics.RetrieveAPIView):
+    queryset = Symptom.objects.all()
+    serializer_class = SymptomSerializer
+    url_name = 'Symptom-detail'
+
+
+class BookingView(generics.ListCreateAPIView):
+    queryset = Booking.objects.all()
+    serializer_class = BookingSerializer
+    url_name = 'Booking-list'
+
+
+class BookingDetailView(generics.RetrieveAPIView):
+    queryset = Booking.objects.all()
+    serializer_class = BookingSerializer
+    url_name = 'Booking-detail'
+
+
+class TheatreView(generics.ListCreateAPIView):
+    queryset = Theatre.objects.all()
+    serializer_class = TheatreSerializer
+    url_name = 'Theatre-list'
+
+
+class TheatreDetailView(generics.RetrieveAPIView):
+    queryset = Theatre.objects.all()
+    serializer_class = TheatreSerializer
+    url_name = 'Theatre-detail'
+
+
+class ClinicView(generics.ListCreateAPIView):
+    queryset = Clinic.objects.all()
+    serializer_class = ClinicSerializer
+    url_name = 'Clinic-list'
+
+
+class ClinicDetailView(generics.RetrieveAPIView):
+    queryset = Clinic.objects.all()
+    serializer_class = ClinicSerializer
+    url_name = 'Clinic-detail'
+
+
+class NotificationView(generics.ListCreateAPIView):
+    queryset = Notification.objects.all()
+    serializer_class = NotificationSerializer
+    url_name = 'Notification-list'
+
+
+class NotificationDetailView(generics.RetrieveAPIView):
+    queryset = Notification.objects.all()
+    serializer_class = NotificationSerializer
+    url_name = 'Notification-detail'
+
